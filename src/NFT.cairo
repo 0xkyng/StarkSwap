@@ -76,7 +76,7 @@ mod ERC721 {
     }
 
     #[external(v0)]
-    impl INFTImpl of token_stake::nftee::INFT<ContractState> {
+    impl INFTImpl of token_stake::NFT::INFT<ContractState> {
         fn get_name(self: @ContractState) -> felt252 {
             self.name.read()
         }
